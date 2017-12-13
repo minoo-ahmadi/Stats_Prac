@@ -1,0 +1,50 @@
+---
+title: "Day 4 Homework"
+output: html_document
+---
+
+1. Find some aspect of your data that needs to be combined or merged in some way.  This could be a variety of things:
+  - multiple "sheets" in an Excel
+  - multiple files that should be combined into one data set
+  - properties that need to be merged in to one data set. For example:
+    - you have a table of subject properties (gender, handedness, etc.) that need to be merged into the item-level data
+    - you have other information on countries (population, etc.) that need to be merged in
+  - if you DON'T have this naturally-occurring issue, figure out a way to manufacture it. For example:
+    - split up your data into chunks
+    - make up some new table of information that you want to merge in
+  - Explain (in words) what you are trying to do
+  - Use binding/merging commands to accomplish this
+
+```{r}
+mydata <- as.data.frame(mydata[-1, ])
+
+
+
+```
+
+# Excursion about lists & brackets
+
+```{r}
+x <- 1:10
+class(x)
+x[3]
+
+y <- as.list(1:10)
+y[3]
+y[[3]]
+names(y) <- paste("thing", 1:10, sep = "")
+names(y)
+y[[3]]
+y$thing3 # same as [[ ]]
+y[["thing3"]] # also the same
+y["thing3"] # gets the "container" as well
+class(y["thing3"])
+class(y[["thing3"]])
+y[3]
+y["thing3"]
+y[c(FALSE, FALSE, TRUE, FALSE, FALSE, FALSE, FALSE, FALSE, FALSE, FALSE)]
+y[y == 3]
+
+```
+
+# Excursion
